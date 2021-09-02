@@ -16,3 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// 第一引数に相対パス、第二引数に関数を指定する
+Route::get('/home', 'MemoController@showHome');
+
+Route::get('/submit', 'MemoController@showSubmit');
